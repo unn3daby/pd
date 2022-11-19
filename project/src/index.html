@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <!-- <link rel="stylesheet" href="fonts/stylesheet.css"> -->
+</head>
+<body>
+    <section class="nav">
+        <div class="offcanvas offcanvas-start nav__canvas" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+            <img src="img/logo.svg" alt="logo" class="nav__img">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="nav__search">
+                <h2 class="nav__search__subtitle">
+                    Поиск студента
+                </h2>
+                <form action="">
+                    <input class="form-control form-control-lg search" type="text" placeholder="ФИО студента">
+
+                    <div class="btn-group dropdown">
+                        <button class="btn btn-secondary btn-lg dropdown-toggle drop" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Поиск по всем группам
+                        </button>
+                        <ul class="dropdown-menu dropdown p-2">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                              Поиск по всем группам
+                            </label>
+                            <hr>
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                              123-456
+                            </label>
+                        </ul>
+                    </div>
+                    <div class="btn-group dropdown">
+                        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Показать день
+                        </button>
+                        <ul class="dropdown-menu dropdown p-2">
+                        </div>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" class="form-control form-control-lg">
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                          Фильтр 1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                          Фильтр 2
+                        </label>
+                    </div>
+                </form>
+                <div class="button__wrapper">
+                    <button type="button" class="nav__button btn btn-primary">Поиск</button>
+                    <button type="button" class="nav__button btn btn-light">Экспортировать</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="main">
+        <div class="main__nav">
+            <button class="btn burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <img src="icons/burger.svg" alt="burger_menu">
+            </button>
+            <div class="main__nav__links">
+                <div class="main__nav__login">Вы вошли как: <span>{{name}}</span></div>
+                <div class="main__nav__out"><a href="#">Выйти</a></div>
+            </div>
+        </div>
+        <div class="main__wrapper">
+            <img src="img/bg.svg" alt="bg">
+            <div class="main_subtitle">Вы пока не выбрали студента для просмотра посещаемости</div>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

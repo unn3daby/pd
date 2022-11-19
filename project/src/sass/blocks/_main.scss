@@ -1,0 +1,45 @@
+.main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #E5e5e5;
+    .canvas_on {
+        margin-left: 20%;
+        transition: 0.3s;
+    }
+    .canvas_off {
+        margin-left: 0px;
+        transition: 0.3s;
+    }
+    &__subtitle {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    &__nav {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        background-color: #fff;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 37px 50px 47px 50px;
+        &__links {
+            justify-content: center;
+            align-items: center;
+            span {
+                font-weight: bold;
+            }
+            display: flex;
+            div:nth-child(1) {
+                margin-right: 52px;
+            }
+        } 
+        a {
+            font-weight: 400;
+        } 
+    }
+}
